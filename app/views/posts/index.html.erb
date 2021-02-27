@@ -1,4 +1,10 @@
-<p>Top Page</p>
+<p>Ajax App</p>
+<%= form_with url: '/posts', method: :post, id: "form" do |form| %>
+  <%= form.text_field :content %>
+  <%= form.submit '投稿する', id: "submit" %>
+<% end %>
+<div id= "list">
+</div>
 <%= link_to '新規登録', '/posts/new' %>
 <% @posts.each do |post| %>
 <div class="post">
